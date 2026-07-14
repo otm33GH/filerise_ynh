@@ -3,7 +3,7 @@ declare(strict_types=1);
 // config.php
 
 // Define constants
-define('PROJECT_ROOT', dirname(__DIR__));
+define('PROJECT_ROOT', {{INSTALL_DIR}});
 $autoload = PROJECT_ROOT . '/vendor/autoload.php';
 if (is_file($autoload)) {
     require_once $autoload;
