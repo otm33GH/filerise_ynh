@@ -3,7 +3,7 @@ declare(strict_types=1);
 // config.php
 
 // Define constants
-define('PROJECT_ROOT', {{INSTALL_DIR}});
+define('PROJECT_ROOT', '__INSTALL_DIR__');
 $autoload = PROJECT_ROOT . '/vendor/autoload.php';
 if (is_file($autoload)) {
     require_once $autoload;
@@ -20,20 +20,20 @@ define(
     'UPLOAD_DIR',
     ($testUploadDir !== false && $testUploadDir !== '')
         ? rtrim($testUploadDir, "/\\") . '/'
-        : '{{DATA_DIR}}/uploads/'
+        : '__DATA_DIR__/uploads/'
 );
 define(
     'USERS_DIR',
     ($testUsersDir !== false && $testUsersDir !== '')
         ? rtrim($testUsersDir, "/\\") . '/'
-        : '{{DATA_DIR}}/users/'
+        : '__DATA_DIR__/users/'
 );
 define('USERS_FILE',    'users.txt');
 define(
     'META_DIR',
     ($testMetaDir !== false && $testMetaDir !== '')
         ? rtrim($testMetaDir, "/\\") . '/'
-        : '{{DATA_DIR}}/metadata/'
+        : '__DATA_DIR__/metadata/'
 );
 define('META_FILE',     'file_metadata.json');
 define('TRASH_DIR',     UPLOAD_DIR . 'trash/');
